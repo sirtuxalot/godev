@@ -1,0 +1,10 @@
+create_table("tickets") {
+  t.Column("ticket_id", "integer", {primary: true})
+  t.Column("requestor", "string", {"default": ""})
+  t.Column("title", "string", {"default": ""})
+  t.Column("description", "string", {})
+  t.Column("closed", "bool", {"default": false})
+  t.Column("in_progress", "bool", {"default": false})
+  t.Column("category_id", "integer", {})
+  t.Column("hours", "float", {})
+}

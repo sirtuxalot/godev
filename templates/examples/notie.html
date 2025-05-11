@@ -1,0 +1,35 @@
+{{ template "base" . }}
+  {{ define "css" }} {{ end }}
+  {{ define "title" }}
+    <title>Go DEV - Notie</title>
+  {{ end }}
+  {{ define "content" }}
+    <div class="container">
+      
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center mt=3">Notie Alerts</h1>
+          
+          <div class="row">
+            <div class="col text-center">
+              <br>
+              <a id="success-notie-button" href="#!" class="btn btn-success">Success</a>
+            </div>
+            <div class="col text-center">
+              <br>
+              <a id="warning-notie-button" href="#!" class="btn btn-warning">Warning</a>
+            </div>
+            <div class="col text-center">
+              <br>
+              <a id="danger-notie-button" href="#!" class="btn btn-danger">Error</a>
+            </div>
+          </div>
+        <p>
+        </div>
+      </div>
+
+    </div>
+  {{ end }}
+  {{ define "js" }}
+    <script src="static/local/notie.js"></script>
+  {{ end }}

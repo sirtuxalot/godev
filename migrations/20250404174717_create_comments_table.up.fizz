@@ -1,0 +1,5 @@
+create_table("comments") {
+  t.Column("comment_id", "integer", {primary: true})
+  t.Column("ticket_id", "integer", {})
+  t.Column("comment", "string", {})
+}

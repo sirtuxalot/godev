@@ -1,0 +1,1 @@
+drop_foreign_key("tickets", "tickets_categories_category_id_fk",{})

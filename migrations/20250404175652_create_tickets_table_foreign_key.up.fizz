@@ -1,0 +1,4 @@
+add_foreign_key("comments", "ticket_id", {"tickets": ["ticket_id"]}, {
+  "on_delete": "cascade",
+  "on_update": "cascade",
+})

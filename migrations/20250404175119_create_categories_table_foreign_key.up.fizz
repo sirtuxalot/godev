@@ -1,0 +1,4 @@
+add_foreign_key("tickets", "category_id", {"categories": ["category_id"]}, {
+  "on_delete": "cascade",
+  "on_update": "cascade",
+})

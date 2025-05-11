@@ -1,0 +1,1 @@
+drop_foreign_key("comments", "comments_tickets_ticket_id_fk",{})

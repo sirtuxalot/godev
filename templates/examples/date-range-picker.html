@@ -1,0 +1,40 @@
+{{ template "base" . }}
+  {{ define "css" }}
+    <!-- https://mymth.github.io/vanillajs-datepicker/#/ -->
+    <link href="static/datepicker-1.3.4/datepicker-bs5.min.css" rel="stylesheet">
+  {{ end }}
+  {{ define "title" }}
+    <title>Go DEV - DRP</title>
+  {{ end }}
+  {{ define "content" }}
+    <div class="container">
+      
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center mt=3">DatePicker Test 2</h1>
+
+          <form action="" methed="get" novalidate class="needs-validation">
+            <div class="row" id="range-picker-test">
+              <center>Date Range Picker</center>
+              <div class="col-md-3"></div>
+              <div class="col-md-3">
+                <input required type="text" class="form-control" id="start-date" name="start-date" placeholder="Start Date">
+              </div>
+              <div class="col-md-3">
+                <input required type="text" class="form-control" id="end-date" name="end-date" placeholder="End Date">
+              </div>
+            </div>
+            <p>
+            <center><button type="submit" class="btn btn-secondary">Check Dates</button></center>
+          </form>
+
+          <p>
+        </div>
+      </div>
+
+    </div>
+  {{ end }}
+  {{ define "js" }}
+    <script src="static/local/date-range-picker.js"></script>
+  {{ end }}
+

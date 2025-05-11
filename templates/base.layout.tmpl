@@ -1,0 +1,100 @@
+{{ define "base" }}
+  <!doctype html>
+  <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- https://getbootstrap.com/docs -->
+    <link href="/static/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- https://mymth.github.io/vanillajs-datepicker/#/ -->
+    <link href="/static/datepicker-1.3.4/datepicker-bs5.min.css" rel="stylesheet">
+    <!-- https://github.com/jaredreich/notie -->
+    <link href="/static/notie-4.3.1/notie.min.css" rel="stylesheet">
+    <!-- https://sweetalert2.github.io -->
+    <link href="/static/sweetalert2-11.15.10/sweetalert2.min.css" rel="stylesheet">
+    {{ block "css" . }} {{ end }}
+    <link href="/static/local/app.css" rel="stylesheet">
+    {{ block "title" . }} {{ end }}
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                List
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/open">Open</a></li>
+                <li><a class="dropdown-item" href="/closed">Closed</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                JS Tests
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/date-picker1">Date Picker</a></li>
+                <li><a class="dropdown-item" href="/date-picker2">Date Range Picker</a></li>
+                <li><a class="dropdown-item" href="/date-picker3">Date Picker PopUp</a></li>
+                <li><a class="dropdown-item" href="/date-picker4">Date Range Picker PopUp</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/notie">Notie</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/sweet-alert2">SweetAlert2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+
+                <a class="nav-link" href="/login">Login</a>
+
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/availability">Book Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li> -->
+
+          </ul>
+          <!-- <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+    {{ block "content" . }} {{ end }}
+    <div class="row my-footer">
+      <div class="col text-center">
+        Left
+      </div>
+      <div class="col text-center">
+        Center
+      </div>
+      <div class="col text-center">
+        Right
+      </div>
+    </div>
+    <script src="/static/popper-2.11.8/popper.min.js"></script>
+    <script src="/static/bootstrap-5.3.3/js/bootstrap.min.js"></script>
+    <script src="/static/datepicker-1.3.4/datepicker-full.min.js"></script>
+    <script src="/static/notie-4.3.1/notie.min.js"></script>
+    <script src="/static/sweetalert2-11.15.10/sweetalert2.all.min.js"></script>
+    <script src="/static/local/app.js"></script>
+    {{block "js" .}} {{end}}
+  </body>
+  </html>
+{{ end }}

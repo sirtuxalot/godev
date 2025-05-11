@@ -1,0 +1,53 @@
+{{ template "base" . }}
+  {{ define "css" }} {{ end }}}
+  {{ define "title" }}
+    <title>Go DEV - SwAl</title>
+  {{ end }}
+  {{ define "content" }}
+    <div class="container">
+      
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center mt=3">SweetAlert2 Modals</h1>
+
+          <div class="row">
+            <div class="col text-center">
+              <br>
+              <a id="success-modal-sw2-button" href="#!" class="btn btn-success">Success</a>
+            </div>
+            <div class="col text-center">
+              <br>
+              <a id="warning-modal-sw2-button" href="#!" class="btn btn-warning">Warning</a>
+            </div>
+            <div class="col text-center">
+              <br>
+              <a id="danger-modal-sw2-button" href="#!" class="btn btn-danger">Error</a>
+            </div>
+          </div>
+        <p>
+          <hr>
+          <h1 class="text-center mt=3">SweetAlert2 Toasts</h1>
+
+          <div class="row">
+            <div class="col text-center">
+              <br>
+              <a id="success-toast-sw2-button" href="#!" class="btn btn-success">Success</a>
+            </div>
+            <div class="col text-center">
+              <br>
+              <a id="warning-toast-sw2-button" href="#!" class="btn btn-warning">Warning</a>
+            </div>
+            <div class="col text-center">
+              <br>
+              <a id="danger-toast-sw2-button" href="#!" class="btn btn-danger">Error</a>
+            </div>
+          </div>
+        <p>
+        </div>
+      </div>
+
+    </div>
+  {{ end }}
+  {{ define "js" }}
+    <script src="static/local/sw2.js"></script>
+  {{ end }}
