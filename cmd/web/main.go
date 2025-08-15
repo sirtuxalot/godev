@@ -113,6 +113,8 @@ func run() (*database.DB, error) {
 	session.Cookie.SameSite = http.SameSiteLaxMode
 	session.Cookie.Secure = app.InProduction
 
+	app.Session = session
+
 	// connect to database
 	log.Println("Connecting to database...")
 	connectString := fmt.Sprintf("host=%s port=%s dbname=%s user=%s password='%s' sslmode=%s", DB_Host, DB_Port, DB_Name, DB_User, DB_Password, DB_SSL)
