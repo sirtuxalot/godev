@@ -13,6 +13,11 @@ import (
 var app *config.AppConfig
 var sizeLimit = 0
 
+// setup app config for helpers
+func NewAuth(appConfig *config.AppConfig) {
+  app = appConfig
+}
+
 // UserLogin struct represents the user credentials.
 type UserLogin struct {
   Login_ID  string

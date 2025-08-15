@@ -6,9 +6,11 @@ import (
 	"fmt"
 	"github.com/alexedwards/scs/v2"
 	"github.com/joho/godotenv"
+	"godev/internal/auth"
 	"godev/internal/config"
 	"godev/internal/database"
 	"godev/internal/handlers"
+	"godev/internal/helpers"
 	"godev/internal/render"
 	"log"
 	"net/http"
@@ -137,8 +139,10 @@ func run() (*database.DB, error) {
 	repo := handlers.NewRepo(&app)
 	handlers.NewHandlers(repo)
 
-	// add template cache data to application config and send to render package
+	// pass application config to internal packages
 	render.NewTemplates(&app)
+	helpers.NewHelpers(&app)
+	auth.NewAuth(&app)
 
 	return appDB, nil
 }
